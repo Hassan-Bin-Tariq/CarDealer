@@ -1,5 +1,4 @@
 
-import "./Dashboard.css"
 import { PiSteeringWheelBold } from 'react-icons/pi';
 import { IoCarSportSharp } from 'react-icons/io5';
 import { BsFillFuelPumpFill } from 'react-icons/bs';
@@ -77,14 +76,14 @@ const Dashboard = () => {
   const [result, setResult] = useState();
   
   const posts = [
-    { title: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', description: 'Automobili Lamborghini S.p.A. is an Italian manufacturer of luxury sports cars and SUVs based in Sant Agata Bolognese.'},
-    { title: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', description: 'Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial.'},
-    { title: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', description: 'TBayerische Motoren Werke AG, abbreviated as BMW, is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich'},
-    { title: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.'},
-    { title: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', description: 'Automobili Lamborghini S.p.A. is an Italian manufacturer of luxury sports cars and SUVs based in Sant Agata Bolognese.'},
-    { title: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', description: 'Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial.'},
-    { title: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', description: 'TBayerische Motoren Werke AG, abbreviated as BMW, is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich'},
-    { title: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.'},
+    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'Basic', type:'single seater',location:'america',mileage:'2000', body:'hatchBack',transmission:'manual'},
+    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Latest',type:'hatch back',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Previous', type:'modern seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', model: 'latest', type:'double seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'basic', type:'double seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Basic', type:'double seater',location:'india',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Modern', type:'sports',location:'london',mileage:'2000',body:'hatchBack',transmission:'manual'},
+    { brand: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', model: 'Motor', type:'luxury',location:'berlin',mileage:'2000',body:'hatchBack',transmission:'manual'},
   
   ]
 
@@ -284,81 +283,41 @@ const Dashboard = () => {
   return (
     <>
       <WidgetsDropdown />
-      <div>
-        {/* <form>
-          <span style={margin}>Search</span>
-        <input onChange={handleChange} value={state.query} type="search"/>
 
-          <span style={margin}>Sort By</span>
-          <select defaultValue={'title'} onChange={(e) => sortBy(e.target.value)}>
-            <option value="title" disabled>None</option>
-            <option value="title">Title</option>
-            <option value="description">Description</option>
-            <option value="price">Price</option>
-          </select>
-
-          <span style={margin}>Sort By</span>
-          <select defaultValue={'DEFAULT'} onChange={(e) => updatePosts(e.target.value)}>
-            <option value="DEFAULT" disabled>None</option>
-            <option value="ascending">Ascending</option>
-            <option value="descending">Descending</option>
-
-          </select>
-      </form> */}
-        {/* <div class="form-group">
-          <label>Car Condition</label>
-          <select class="select">
-          <option value="1">All Status</option>
-          <option value="2">New Car</option>
-          <option value="3">Used Car</option>
-          </select>
-        </div> */}
-      </div>      
-      <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
-
-      {/* {(
+        <CTable>
+              <CTableHead>
+                <CTableRow>
+                  <CTableHeaderCell scope="col">#</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Brand</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Model</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">type</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Location</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Mileage</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Body</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Transmission</CTableHeaderCell>
+                </CTableRow>
+              </CTableHead>
+              {(
               state.list.map(post => {
-            return <CCol xs key={post.title}>
-                <CCard >
-                  <CCardImage orientation="top" src={post.image} />
-                  <CCardTitle>{post.title}</CCardTitle>
-                  <CCardSubtitle style={{ color: 'red' }}>{post.price}</CCardSubtitle>
-                  <CCardText>{post.description}</CCardText>
-                </CCard>
-                </CCol>
-            })
-      )} */}
-      {(
-              state.list.map(post => {
-            return <CCol xs key={post.title}>
+                return <CTableBody xs key={post.title}>
 
+                    <CTableRow>
+                      <CTableDataCell style={{ width: '10%' }}>
+                        <img src={post.image} alt="Car" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                      </CTableDataCell>
+                      <CTableDataCell>{post.brand}</CTableDataCell>
+                      <CTableDataCell>{post.model}</CTableDataCell>
+                      <CTableDataCell>{post.type}</CTableDataCell>
+                      <CTableDataCell>{post.location}</CTableDataCell>
+                      <CTableDataCell>{post.mileage}</CTableDataCell>
+                      <CTableDataCell>{post.body}</CTableDataCell>
+                      <CTableDataCell>{post.transmission}</CTableDataCell>
+                    </CTableRow>
 
-                <div class="card2">
-                  <div class="imgBx2">
-                    <img src={post.image}/>
-                  </div>
-                  <div class="content">
-                    <div class="details">
-                      <h2>{post.title}<br /><span>{post.price}</span></h2>
-                      <div class="data">
-                        <h3><PiSteeringWheelBold size={15} color="red"  /><br /><span>Automatic</span></h3>
-                        <h3><IoCarSportSharp size={20} color="red"/><br /><span>Model: 2023</span></h3>
-                        <h3><BsFillFuelPumpFill size={12} color="red"/><br /><span>Hybrid</span></h3>
-                      </div>
-                      <div class="actionBtn">
-                        <button>Buy</button>
-                        <button>Details</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                </CCol>
-            })
-      )}
-
-      </CRow>
-
+                </CTableBody>
+              })
+            )}
+        </CTable>
     </>
   )
 }

@@ -17,6 +17,24 @@ import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
+
+  function login() {
+    const usernameInput = document.querySelector('input[placeholder="Username"]');
+    const passwordInput = document.querySelector('input[placeholder="Password"]');
+  
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+  
+    if (username === "admin" && password === "admin") {
+      // Log in successful
+      window.location.href = "/";
+      console.log("Login successful!");
+    } else {
+      // Invalid credentials
+      console.log("Invalid username or password. Please try again.");
+    }
+  }
+
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -46,7 +64,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" className="px-4">
+                        <CButton style={{ backgroundColor: '#192a56'}}className="px-4" onClick={login}>
                           Login
                         </CButton>
                       </CCol>
@@ -59,7 +77,7 @@ const Login = () => {
                   </CForm>
                 </CCardBody>
               </CCard>
-              <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
+              <CCard className="text-white py-5" style={{ backgroundColor: '#192a56', width: '44%' }}>
                 <CCardBody className="text-center">
                   <div>
                     <h2>Sign up</h2>
