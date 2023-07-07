@@ -6,7 +6,8 @@ import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import { logoNegative } from 'src/assets/brand/logo-negative'
+// import { logoNegative } from 'src/assets/brand/logo-negative'
+import logoMasen from 'src/assets/images/masen.png'
 import { sygnet } from 'src/assets/brand/sygnet'
 
 import SimpleBar from 'simplebar-react'
@@ -30,8 +31,9 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
-        <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+        <img src='https://maessencsc.com/wp-content/uploads/2023/05/logo-1536x625-3-1024x370.webp' height={60}></img>
+        <CIcon className="sidebar-brand-full" icon='https://maessencsc.com/wp-content/uploads/2023/05/logo-1536x625-3-1024x370.webp' height={35} />
+        <CIcon className="sidebar-brand-narrow" icon={sygnet} height={355} />
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>
