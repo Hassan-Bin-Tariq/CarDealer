@@ -11,24 +11,25 @@ import {
 import { getStyle } from '@coreui/utils'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import CIcon from '@coreui/icons-react'
-import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
-
+import { cilArrowBottom, cilArrowTop, cilOptions,cilCarAlt } from '@coreui/icons'
+import ReactImg from 'src/assets/images/car.jpeg'
 const WidgetsDropdown = () => {
   return (
     <CRow>
       <CCol sm={6} lg={3}>
         <CWidgetStatsA
           className="mb-4"
-          color="primary"
+          color="secondary"
+
           value={
             <>
-              26K{' '}
+              500{' '}
               <span className="fs-6 fw-normal">
-                (-12.4% <CIcon icon={cilArrowBottom} />)
+                (+12.4%)
               </span>
             </>
           }
-          title="Users"
+          title="+Available Cars"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -109,13 +110,13 @@ const WidgetsDropdown = () => {
           color="info"
           value={
             <>
-              $6.200{' '}
+              900{' '}
               <span className="fs-6 fw-normal">
                 (40.9% <CIcon icon={cilArrowTop} />)
               </span>
             </>
           }
-          title="Income"
+          title="+Happy Clients"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -195,13 +196,13 @@ const WidgetsDropdown = () => {
           color="warning"
           value={
             <>
-              2.49{' '}
+              1500{' '}
               <span className="fs-6 fw-normal">
                 (84.7% <CIcon icon={cilArrowTop} />)
               </span>
             </>
           }
-          title="Conversion Rate"
+          title="+Team Workers"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="p-0">
@@ -268,13 +269,13 @@ const WidgetsDropdown = () => {
           color="danger"
           value={
             <>
-              44K{' '}
+              30{' '}
               <span className="fs-6 fw-normal">
-                (-23.6% <CIcon icon={cilArrowBottom} />)
+                (-23.6% <CIcon icon={cilArrowTop} />)
               </span>
             </>
           }
-          title="Sessions"
+          title="+Years of Experience"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="p-0">

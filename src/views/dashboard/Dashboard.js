@@ -1,5 +1,8 @@
 
-
+import "./Dashboard.css"
+import { PiSteeringWheelBold } from 'react-icons/pi';
+import { IoCarSportSharp } from 'react-icons/io5';
+import { BsFillFuelPumpFill } from 'react-icons/bs';
 import {
   CAvatar,
   CButton,
@@ -77,7 +80,12 @@ const Dashboard = () => {
     { title: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', description: 'Automobili Lamborghini S.p.A. is an Italian manufacturer of luxury sports cars and SUVs based in Sant Agata Bolognese.'},
     { title: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', description: 'Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial.'},
     { title: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', description: 'TBayerische Motoren Werke AG, abbreviated as BMW, is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich'},
-    { title: 'Honda',price: '$$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.'},
+    { title: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.'},
+    { title: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', description: 'Automobili Lamborghini S.p.A. is an Italian manufacturer of luxury sports cars and SUVs based in Sant Agata Bolognese.'},
+    { title: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', description: 'Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial.'},
+    { title: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', description: 'TBayerische Motoren Werke AG, abbreviated as BMW, is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich'},
+    { title: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', description: 'Honda Motor Co., Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.'},
+  
   ]
 
 
@@ -275,8 +283,9 @@ const Dashboard = () => {
 
   return (
     <>
+      <WidgetsDropdown />
       <div>
-        <form>
+        {/* <form>
           <span style={margin}>Search</span>
         <input onChange={handleChange} value={state.query} type="search"/>
 
@@ -295,24 +304,19 @@ const Dashboard = () => {
             <option value="descending">Descending</option>
 
           </select>
-      </form>
-      {/* <ul>
-        {(
-            state.list.map(post => {
-          return <div key={post.title} style={card}>
-                <h2>{post.title}</h2>
-                <img src={post.image}></img>
-                <p>{post.description}</p>
-              </div>
-          })
-          )}
-
-          {state.list.length === 0 && <h2>Empty List !!!</h2>}
-        </ul> */}
+      </form> */}
+        {/* <div class="form-group">
+          <label>Car Condition</label>
+          <select class="select">
+          <option value="1">All Status</option>
+          <option value="2">New Car</option>
+          <option value="3">Used Car</option>
+          </select>
+        </div> */}
       </div>      
       <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
 
-      {(
+      {/* {(
               state.list.map(post => {
             return <CCol xs key={post.title}>
                 <CCard >
@@ -323,41 +327,38 @@ const Dashboard = () => {
                 </CCard>
                 </CCol>
             })
+      )} */}
+      {(
+              state.list.map(post => {
+            return <CCol xs key={post.title}>
+
+
+                <div class="card2">
+                  <div class="imgBx2">
+                    <img src={post.image}/>
+                  </div>
+                  <div class="content">
+                    <div class="details">
+                      <h2>{post.title}<br /><span>{post.price}</span></h2>
+                      <div class="data">
+                        <h3><PiSteeringWheelBold size={15} color="red"  /><br /><span>Automatic</span></h3>
+                        <h3><IoCarSportSharp size={20} color="red"/><br /><span>Model: 2023</span></h3>
+                        <h3><BsFillFuelPumpFill size={12} color="red"/><br /><span>Hybrid</span></h3>
+                      </div>
+                      <div class="actionBtn">
+                        <button>Buy</button>
+                        <button>Details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </CCol>
+            })
       )}
-        {/* <CCard>
-          <CCardImage orientation="top" src={ReactImg} />
-          <CCardBody>
-            <CCardTitle>Cardd title</CCardTitle>
-            <CCardText>Thisx</CCardText>
-            <CCardText>
-              <small className="text-medium-emphasis">Last updated 3 mins ago</small>
-            </CCardText>
-          </CCardBody>
-        </CCard>
-        <CCard>
-          <CCardImage orientation="top" src={ReactImg} />
-          <CCardBody>
-            <CCardTitle>Card title</CCardTitle>
-            <CCardText>
-              This card has supporting text below as a natural lead-in to additional content.
-            </CCardText>
-            <CCardText>
-              <small className="text-medium-emphasis">Last updated 3 mins ago</small>
-            </CCardText>
-          </CCardBody>
-        </CCard>
-        <CCard>
-          <CCardImage orientation="top" src={ReactImg} />
-          <CCardBody>
-            <CCardTitle>Card title</CCardTitle>
-            <CCardText>This is</CCardText>
-            <CCardText>
-              <small className="text-medium-emphasis">Last updated 3 mins ago</small>
-            </CCardText>
-          </CCardBody>
-        </CCard> */}
 
       </CRow>
+
     </>
   )
 }

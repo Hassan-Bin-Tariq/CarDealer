@@ -27,187 +27,111 @@ const _nav = [
     },
   },
   {
-    component: CNavTitle,
-    name: 'Theme',
-  },
-  {
     component: CNavItem,
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    name: 'Login',
+    to: '/login',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    },
   },
   {
     component: CNavTitle,
-    name: 'Components',
+    name: 'Filters',
   },
   {
     component: CNavGroup,
-    name: 'Base',
+    name: 'Car Condition',
     to: '/base',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
+        name: 'New car',
         to: '/base/accordion',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
+        name: 'Old car',
         to: '/base/breadcrumbs',
-      },
-      {
-        component: CNavItem,
-        name: 'Cards',
-        to: '/base/cards',
-      },
-      {
-        component: CNavItem,
-        name: 'Carousel',
-        to: '/base/carousels',
-      },
-      {
-        component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
-      },
-      {
-        component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
-      },
-      {
-        component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
-      },
-      {
-        component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
-      },
-      {
-        component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
-      },
-      {
-        component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
-      },
+      }
     ],
   },
+
   {
     component: CNavGroup,
-    name: 'Buttons',
+    name: 'Brand Name',
     to: '/buttons',
     icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Buttons',
+        name: 'BMW',
         to: '/buttons/buttons',
       },
       {
         component: CNavItem,
-        name: 'Buttons groups',
+        name: 'Ferrari',
         to: '/buttons/button-groups',
       },
       {
         component: CNavItem,
-        name: 'Dropdowns',
+        name: 'Mercedez',
+        to: '/buttons/dropdowns',
+      },
+      {
+        component: CNavItem,
+        name: 'Hyundai',
+        to: '/buttons/dropdowns',
+      },
+      {
+        component: CNavItem,
+        name: 'Nissan',
         to: '/buttons/dropdowns',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: 'Car model',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Form Control',
+        name: '3-Series',
         to: '/forms/form-control',
       },
       {
         component: CNavItem,
-        name: 'Select',
+        name: 'Carrera',
         to: '/forms/select',
       },
       {
         component: CNavItem,
-        name: 'Checks & Radios',
+        name: 'G-TR',
         to: '/forms/checks-radios',
       },
       {
         component: CNavItem,
-        name: 'Range',
+        name: 'Macan',
         to: '/forms/range',
       },
       {
         component: CNavItem,
-        name: 'Input Group',
+        name: 'N-Series',
         to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
-      },
+      }
     ],
   },
   {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
     component: CNavGroup,
-    name: 'Icons',
+    name: 'Choose year',
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'CoreUI Free',
+        name: '2023',
         to: '/icons/coreui-icons',
         badge: {
           color: 'success',
@@ -216,89 +140,106 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'CoreUI Flags',
+        name: '2022',
         to: '/icons/flags',
       },
       {
         component: CNavItem,
-        name: 'CoreUI Brands',
+        name: '2021',
         to: '/icons/brands',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
+    name: 'Choose milieage',
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Alerts',
+        name: '5000 Miles',
         to: '/notifications/alerts',
       },
       {
         component: CNavItem,
-        name: 'Badges',
+        name: '4000 Miles',
         to: '/notifications/badges',
       },
       {
         component: CNavItem,
-        name: 'Modal',
+        name: '3000 Miles',
         to: '/notifications/modals',
       },
       {
         component: CNavItem,
-        name: 'Toasts',
+        name: '2000 Miles',
         to: '/notifications/toasts',
       },
+      {
+        component: CNavItem,
+        name: '1000 Miles',
+        to: '/notifications/toasts',
+      }
     ],
-  },
-  {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Extras',
   },
   {
     component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+    name: 'Price Range',
+    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Login',
-        to: '/login',
+        name: '$1000 - $5000',
+        to: '/notifications/alerts',
       },
       {
         component: CNavItem,
-        name: 'Register',
-        to: '/register',
+        name: '$5000 - $10000',
+        to: '/notifications/badges',
       },
       {
         component: CNavItem,
-        name: 'Error 404',
-        to: '/404',
+        name: '$15000 - $20000',
+        to: '/notifications/modals',
       },
       {
         component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
+        name: '$20000 - $25000',
+        to: '/notifications/toasts',
       },
+      {
+        component: CNavItem,
+        name: '$25000 - $30000',
+        to: '/notifications/toasts',
+      }
     ],
   },
   {
-    component: CNavItem,
-    name: 'Docs',
-    href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    component: CNavGroup,
+    name: 'Body Type',
+    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Sedan',
+        to: '/notifications/alerts',
+      },
+      {
+        component: CNavItem,
+        name: 'Compact',
+        to: '/notifications/badges',
+      },
+      {
+        component: CNavItem,
+        name: 'Coupe',
+        to: '/notifications/modals',
+      },
+      {
+        component: CNavItem,
+        name: 'Wagon',
+        to: '/notifications/toasts',
+      },
+    ],
   },
 ]
 
