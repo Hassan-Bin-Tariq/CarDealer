@@ -76,15 +76,14 @@ const Dashboard = () => {
   const [result, setResult] = useState();
   
   const posts = [
-    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'Basic', type:'single seater',location:'america',mileage:'2000', body:'hatchBack',transmission:'manual'},
-    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Latest',type:'hatch back',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Previous', type:'modern seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', model: 'latest', type:'double seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'basic', type:'double seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Basic', type:'double seater',location:'india',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Modern', type:'sports',location:'london',mileage:'2000',body:'hatchBack',transmission:'manual'},
-    { brand: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', model: 'Motor', type:'luxury',location:'berlin',mileage:'2000',body:'hatchBack',transmission:'manual'},
-  
+    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'Basic', type:'single seater',location:'america',mileage:'2000', body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Latest',type:'hatch back',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Previous', type:'modern seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'Honda',price: '$100',image:'https://www.motortrend.com/uploads/sites/10/2022/11/2023-honda-civic-sport-5door-hatchback-angular-front.png', model: 'latest', type:'double seater',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'Lamborghini',price: '$200', image:'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/2023/revuelto/revuelto_m.png', model: 'basic', type:'double seatera',location:'america',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Basic', type:'double seater',location:'india',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+    { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Modern', type:'sports',location:'london',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
+ 
   ]
 
 
@@ -284,7 +283,7 @@ const Dashboard = () => {
     <>
       <WidgetsDropdown />
 
-        <CTable>
+        <CTable bordered responsive>
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col">#</CTableHeaderCell>
@@ -295,6 +294,8 @@ const Dashboard = () => {
                   <CTableHeaderCell scope="col">Mileage</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Body</CTableHeaderCell>
                   <CTableHeaderCell scope="col">Transmission</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Date Added</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Date Delisted</CTableHeaderCell>
                 </CTableRow>
               </CTableHead>
               {(
@@ -312,6 +313,8 @@ const Dashboard = () => {
                       <CTableDataCell>{post.mileage}</CTableDataCell>
                       <CTableDataCell>{post.body}</CTableDataCell>
                       <CTableDataCell>{post.transmission}</CTableDataCell>
+                      <CTableDataCell>{post.DateAdded}</CTableDataCell>
+                      <CTableDataCell>{post.DateDelisted}</CTableDataCell>
                     </CTableRow>
 
                 </CTableBody>
