@@ -84,6 +84,7 @@ const Dashboard = () => {
     { brand: 'Mercedes',price: '$300',image:'https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS.jpg', model: 'Basic', type:'double seater',location:'india',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
     { brand: 'BMW',price: '$500',image:'https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/bmw_i/2023/230201_BMW_Group_BMW_i4eDrive40.png', model: 'Modern', type:'sports',location:'london',mileage:'2000',body:'hatchBack',transmission:'manual',DateAdded:'15/2/2023',DateDelisted:'30/2/2023'},
  
+    
   ]
 
 
@@ -282,7 +283,7 @@ const Dashboard = () => {
   return (
     <>
       <WidgetsDropdown />
-
+      <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
         <CTable bordered responsive>
               <CTableHead>
                 <CTableRow>
@@ -321,6 +322,7 @@ const Dashboard = () => {
               })
             )}
         </CTable>
+        </div>
     </>
   )
 }
