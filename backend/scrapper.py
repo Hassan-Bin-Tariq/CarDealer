@@ -30,7 +30,7 @@ def data_get():
     on_value = request.get_data().decode('utf-8')
     print(on_value)
 
-    for i in range(1,21):
+    for i in range(1,6):
         print(i)
         # URL of the website page you want to scrape
         url = 'https://www.autoscout24.nl/lst?atype=C&cy=D%2CA%2CB%2CE%2CF%2CI%2CL%2CNL&damaged_listing=exclude&desc=0&page='+str(i)+'&powertype=kw&search_id=1nin2jhjgo&sort=standard&source=listpage_pagination&ustate=N%2CU'
